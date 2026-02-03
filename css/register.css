@@ -1,0 +1,176 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10%;
+    background: url(../image/image\ register.jpg) no-repeat center;
+    background-size: cover;
+}
+.container .card{
+    /* border: 1px solid red; */
+    width: 500px;
+    /* height: 650px; */
+    padding: 10px 0 ;
+    border-radius: 30px;
+    box-shadow: 0 0 15px;
+    backdrop-filter: blur(18px);
+}
+.container .card .heading{
+    /* border: 1px solid red; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fa1e38;
+}
+.container .card .main{
+    /* border: 1px solid red; */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+}
+.container .card .main .box{
+    /* border: 1px solid red; */
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .card .main .box label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fa1e38;
+}
+.container .card .main .box input{
+    font-size: 1rem;
+    margin: 0 30px;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-bottom: 5px;
+    color: white;
+    /* border: 1px solid red; */
+}
+.container .card .main .box input::placeholder{
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    font-size: .9rem;
+    padding-left: 5px;
+}
+.container .card .main .box .error{
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+.container .card .btn{
+    /* border: 1px solid red; */
+    height: 50px;
+    display: grid;
+    place-content: center;
+}
+.container .card .btn button{
+    font-size: 1.5rem;
+    padding: 5px 30px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: rgba(0, 0, 0, 0.481);
+    color: white;
+    transition: .5s;
+}
+.container .card .btn button:hover{
+    transform: translateY(-3px);
+}
+.container .card .foot{
+    display: grid;
+    place-content: center;
+    padding: 10px 0;
+}
+.container .card .foot h3{
+    color: white;
+    font-weight: 400;
+}
+.container .card .foot h3 a{
+    color: #fa1e38;
+    font-weight: 600;
+}
+
+@media all and (max-width:576px) {
+    .container .card{
+        width: 350px;
+        padding: 20px;
+    }
+    .container{
+        justify-content: center;
+        padding-left: 0;
+        background: url(../image/image\ login.jpg) center no-repeat;
+        background-size: auto;
+    }
+    .container .card .main{
+        padding: 0 10px;
+    }
+    .container .card .btn button{
+        padding: 2.5px 15px;
+        font-size: 1.2rem;
+    }
+    .container .card .main .box .error{
+        font-size: .8rem;
+    }
+    .container .card .foot h3{
+        font-size: .97rem;
+    }
+}
+/* 
+@media all and (max-width:768px) {
+    .container .card{
+        width: 500px;
+        padding: 15px 10px;
+    }
+    .container{
+        justify-content: center;
+        padding-left: 0;
+        background: url(../image/image\ register.jpg) center no-repeat;
+        background-size: auto;
+    }
+    .container .card .main{
+        padding: 0 20px;
+        margin: 20px 0;
+        height: 500px;
+    }
+    .container .card .btn button{
+        padding: 2.5px 15px;
+    }
+    .container .card .main .box .error{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    .container .card .foot h3{
+        font-size: 1.5REM;
+    }
+    .container .card .main .box label{
+        font-size: 1.7rem;
+    }
+    .container .card .main .box input{
+        padding-bottom: 1px;
+    }
+    .container .card .heading h1{
+        font-size: 2.5rem;
+    }
+} */

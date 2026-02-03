@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-page</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="heading">
+                <h1>Login Form</h1>
+            </div>
+            <div class="main">
+                <div class="box box1">
+                    <label for="">E-MAIL :</label>
+                    <input type="email" placeholder="auto@gmail.com" id="email">
+                    <span id="emailErr" class="error"></span>
+                </div>
+                <div class="box box4">
+                    <label for="">PASSWORD :</label>
+                    <input type="text" placeholder="******" id="pass">
+                    <span id="passErr" class="error"></span>
+                </div>
+            </div>
+            <div class="btn">
+                <button onclick="login()">Submit</button>
+            </div>
+            <div class="foot">
+                <h3>You Are a New User Go <a href="./register.html">Register</a>?</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let login = () => {
+            // debugger
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("pass").value;
+
+            //======================================================
+            //error text
+
+            let emailErr = document.getElementById("emailErr")
+            let passErr = document.getElementById("passErr")
+
+            //=======================================================
+
+            let ischeck = true
+
+            if (email === "") {
+                emailErr.innerText = "Pleace Enter Your E-Mail-Id"
+                document.getElementById("email").style.borderBottom = "2px solid white"
+                ischeck = false
+            } else {
+                emailErr.innerText = ""
+            }
+            //===========================================================
+            
+            if (pass === "") {
+                passErr.innerText = "Pleace Enter Your password"
+                document.getElementById("pass").style.borderBottom = "2px solid white"
+                ischeck = false
+            } else {
+                passErr.innerText = ""
+            }
+            //===========================================================
+
+            if (ischeck) {
+                alert('Form Submitted Successfully!')
+            }
+        }
+    </script>
+</body>
+</html>
